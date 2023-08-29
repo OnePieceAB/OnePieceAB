@@ -58,12 +58,12 @@ public:
         }
         else
         {
-            // 读取文件头
+            // 读取文件�?
             lseek(fp, 18, SEEK_SET);
             read(fp, &width, 4);
             read(fp, &higth, 4);
 
-            // 读取位图信息头
+            // 读取位图信息�?
             memset(bmp_color, 0, sizeof(bmp_color));
             lseek(fp, 54, SEEK_SET);
             read(fp, bmp_color, width * higth * 3);
@@ -132,10 +132,10 @@ class touchScreen
 private:
     int fd;
 
-    // 按下前坐标
+    // 
     int width, higth;
 
-    // 松开坐标
+    // 
     int width_end, higth_end;
 
 public:
@@ -166,7 +166,7 @@ public:
         cout << "calculate coordinate" << endl;
         while (1)
         {
-            // 读取触摸屏事件信息
+            // 读取触摸屏事件信�?
             struct input_event ev;
             read(fd, &ev, sizeof(struct input_event));
             if (ev.type == EV_ABS)
