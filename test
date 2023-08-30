@@ -19,8 +19,8 @@ public:
     char catalogSet[100][100];
     char bmp_color[800 * 480 * 3];
     int higth, width;
-    int index_catalog; // 下标
-    int subscript;     // 数量
+    int index_catalog; // 
+    int subscript;     // 
     catalogue()
     {
         index_catalog = 0;
